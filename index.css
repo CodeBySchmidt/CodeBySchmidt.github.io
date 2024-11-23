@@ -1,61 +1,57 @@
-
-.container-color {
-    height: 200px;
-    width: 350px;
-    border-radius: 1em;
-    overflow: hidden;
-    box-shadow: 0 10px 20px #dbdbdb;
-    font-family: sans-serif;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.palette {
-    display: flex;
-    height: 86%;
-    width: 100%;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #171717; /* Background color */
+    color: #f5f5f5;           /* Text color */
+    line-height: 1.6;
+    padding: 0 20px;
 }
 
-.color {
-    height: 100%;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: flex 0.1s linear;
+/* Header */
+header {
+    background-color: #001347; /* Secondary color */
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #89a1e1; /* Primary color as accent */
 }
 
-.color span {
-    opacity: 0;
-    transition: opacity 0.1s linear;
+header h1 {
+    color: #c0cdf2; /* Accent color */
+    font-size: 2rem;
 }
 
-.color:nth-child(1) {
-    background: #264653;
+/* Cards Section */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.color:nth-child(2) {
-    background: #2a9d8f;
+.card {
+    background-color: #89a1e1; /* Primary color */
+    color: #171717;           /* Background color for text */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.color:nth-child(3) {
-    background: #e9c46a;
+.card h2 {
+    margin-bottom: 10px;
 }
 
-.color:nth-child(4) {
-    background: #f4a261;
+.card p {
+    font-size: 0.9rem;
 }
 
-.color:nth-child(5) {
-    background: #e76f51;
-}
-
-.color:hover {
-    flex: 2;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.color:hover span {
-    opacity: 1;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }

@@ -1,64 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-<div class="container-color">
-    <div class="palette">
-        <div class="color"><span>264653</span></div>
-        <div class="color"><span>2A9D8F</span></div>
-        <div class="color"><span>E9C46A</span></div>
-        <div class="color"><span>F4A261</span></div>
-        <div class="color"><span>E76F51</span></div>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/three@0.146.0/build/three.min.js"></script>
-
-<script>
-    // Scene, Camera, Renderer
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth / 2 , window.innerHeight / 2);
-    document.body.appendChild(renderer.domElement);
-
-    // Cube Geometry
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({color: 0x00ff00});
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-
-    // Position Camera
-    camera.position.z = 5;
-
-    // Animation Loop
-    function animate() {
-        requestAnimationFrame(animate);
-
-        // Rotate Cube
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-
-        renderer.render(scene, camera);
-    }
-
-    animate();
-
-    // Handle Window Resize
-    window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
-    });
-</script>
-
+<header>
+    <h1>Welcome to My Portfolio</h1>
+</header>
+<main>
+    <section class="cards">
+        <div class="card">
+            <h2>Project 1</h2>
+            <p>A short description of the first project goes here.</p>
+        </div>
+        <div class="card">
+            <h2>Project 2</h2>
+            <p>A short description of the second project goes here.</p>
+        </div>
+        <div class="card">
+            <h2>Project 3</h2>
+            <p>A short description of the third project goes here.</p>
+        </div>
+    </section>
+</main>
 </body>
-
 </html>
